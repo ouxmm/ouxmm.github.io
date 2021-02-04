@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Maverick</title><link>/</link><description>This is Maverick, Theme Galileo.</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/android-chrome-512x512.png</url><title>Maverick</title><link>/</link></image><language>english</language><lastBuildDate>Thu, 04 Feb 2021 02:13:26 +0806</lastBuildDate><pubDate>Thu, 04 Feb 2021 02:13:26 +0806</pubDate><item><title>Typography</title><link>/archives/typography/</link><description>&lt;div class="notice"&gt;This is an sample article. Typography matters in Maverick.&lt;/div&gt;&lt;!--more--&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Maverick</title><link>/</link><description>This is Maverick, Theme Galileo.</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/android-chrome-512x512.png</url><title>Maverick</title><link>/</link></image><language>english</language><lastBuildDate>Thu, 04 Feb 2021 11:14:11 +0806</lastBuildDate><pubDate>Thu, 04 Feb 2021 11:14:11 +0806</pubDate><item><title>Typography</title><link>/archives/typography/</link><description>&lt;div class="notice"&gt;This is an sample article. Typography matters in Maverick.&lt;/div&gt;&lt;!--more--&gt;
 &lt;h2&gt;L2 Heading&lt;/h2&gt;
 &lt;h3&gt;L3 Heading&lt;/h3&gt;
 &lt;h4&gt;L4 Heading&lt;/h4&gt;
@@ -87,4 +87,37 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;...and a sample static site is generated in &lt;code&gt;test_dist&lt;/code&gt; folder! You can then upload them to GitHub Pages or any other server.&lt;/p&gt;&lt;h3&gt;Generate your own site&lt;/h3&gt;
 &lt;p&gt;By default, Maverick searches all &lt;code&gt;.md&lt;/code&gt; files recursively under &lt;code&gt;test_src&lt;/code&gt; folder, so put your Markdown files in it and run &lt;code&gt;python ./build.py&lt;/code&gt; then everything you need will be in &lt;code&gt;test_dist&lt;/code&gt; folder. Maverick uses so-called &lt;code&gt;YAML frontmatter&lt;/code&gt; to get meta data of your articles, if you have tried Hexo or Jekyll, you should be familiar with it; if you don't, let's look into it now.&lt;/p&gt;&lt;p&gt;......&lt;/p&gt;&lt;p&gt;Read the full documentation &lt;a href="https://github.com/AlanDecode/Maverick"&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;License&lt;/h2&gt;
-&lt;p&gt;MIT © &lt;a href="https://github.com/AlanDecode"&gt;AlanDecode&lt;/a&gt;.&lt;/p&gt;</description><author>hi@imalan.cn (AlanDecode)</author><guid isPermaLink="true">/archives/overview/</guid><pubDate>Wed, 11 Dec 2019 22:23:00 +0806</pubDate></item></channel></rss>
+&lt;p&gt;MIT © &lt;a href="https://github.com/AlanDecode"&gt;AlanDecode&lt;/a&gt;.&lt;/p&gt;</description><author>hi@imalan.cn (AlanDecode)</author><guid isPermaLink="true">/archives/overview/</guid><pubDate>Wed, 11 Dec 2019 22:23:00 +0806</pubDate></item><item><title>This is a test article</title><link>/archives/This%20is%20a%20test%20article/</link><description>&lt;h2&gt;客户架构&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;内部使用贝格系统，即邮件源，邮件由该系统生成并发出&lt;/li&gt;
+&lt;li&gt;使用邮件客户端由人工发送，经由邮件服务器发出(可选)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;RelayPOD™ EDM群发&lt;/h2&gt;
+&lt;p&gt;RelayPOD的EDM群发业务面向中大型企业提供邮件许可时群发服务，典型客户：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;华泰证券：投研报告及商务邮件&lt;/li&gt;
+&lt;li&gt;华金证券：投研报告&lt;/li&gt;
+&lt;li&gt;华创证券：投研报告&lt;/li&gt;
+&lt;li&gt;上海东港：信用卡账单、保险保单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;邮件流向拓扑图&lt;/h2&gt;
+&lt;p&gt;根据东吴证券的内部架构，制作的与RelayPOD接入的邮件流向及拓扑图：&lt;/p&gt;&lt;figure&gt;&lt;img loading="lazy" data-width="2312" data-height="1366" src="/archives/assets/5191ac65ceb5c1c8d852f086e87e1d90.png" alt="" /&gt;&lt;/figure&gt;&lt;h2&gt;如以上拓扑图所示&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;邮件由贝格系统生成并发送到RelayPOD接入点，邮件进入RelayPOD系统&lt;/li&gt;
+&lt;li&gt;邮件也可以由Exchange、Coremail等邮件服务器发出&lt;/li&gt;
+&lt;li&gt;RelayPOD将会对邮件进行安全检查，如合规性及Spam评估&lt;/li&gt;
+&lt;li&gt;接下来邮件进入准备投递状态，邮件会被轮询、频率控制、智能调度模块处理&lt;/li&gt;
+&lt;li&gt;邮件被调度到国内或国外投递服务器并投递到收件方服务器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;特点和机制&lt;/h2&gt;
+&lt;h3&gt;大量的邮件投递服务器&lt;/h3&gt;
+&lt;p&gt;受限于单个投递服务器的投递能力，RelayPOD部署有大量的服务器来应对业务需求，不仅在国内，在国外也拥有投递服务器&lt;/p&gt;&lt;h3&gt;大附件投递能力&lt;/h3&gt;
+&lt;p&gt;RelayPOD的投递服务器拥有大量的带宽资源，对客户的邮件或附件，单封邮件最大支持50M&lt;/p&gt;&lt;h3&gt;轮询机制&lt;/h3&gt;
+&lt;p&gt;当邮件投递失败，系统会根据退信或失败原因来判断邮件是否应该停止投递或更换其他邮件服务器继续尝试投递&lt;/p&gt;&lt;h3&gt;频率控制&lt;/h3&gt;
+&lt;p&gt;大多数邮件服务器在收件时会设置频率控制，以避免收到海量邮件尤其是垃圾邮件，对服务器造成过载压力甚至崩溃&lt;/p&gt;&lt;p&gt;EDM群发时大量的邮件向同一收件服务器投递时，收件方往往采用阻断连接的方式来应对甚至将发件方拉入黑名单，后续邮件无法再投递&lt;/p&gt;&lt;p&gt;RelayPOD的频率控制会主动降低并控制同一IP的发送频率以契合收件方的频率阈值避免出现拉黑的情况从而提高邮件送达成功率&lt;/p&gt;&lt;h3&gt;智能调度&lt;/h3&gt;
+&lt;p&gt;智能调度机制的主要应用场景是发送国外用户邮箱，如Gmail、Outlook、Hotmail邮箱&lt;/p&gt;&lt;p&gt;因为国家防火墙以及出海网络线路质量问题的存在，给国外邮箱发送邮件时经常会有投递不成功和投递延迟的情况存在，智能调度机制可以将邮件调度给RelayPOD的海外投递服务器来执行投递任务，提高对海外邮箱的投信能力&lt;/p&gt;&lt;h2&gt;接入RelayPOD&lt;/h2&gt;
+&lt;p&gt;接入RelayPOD的设置比较简单，对终端使用用户来说是透明的，并不侵入现有的架构：&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;贝格系统设置SMTP的中继下一跳&lt;/li&gt;
+&lt;li&gt;邮件服务器上设置SMTP的中继下一跳&lt;/li&gt;
+&lt;li&gt;设置域名SPF&lt;/li&gt;
+&lt;/ol&gt;
+</description><author>hi@imalan.cn</author><guid isPermaLink="true">/archives/This%20is%20a%20test%20article/</guid><pubDate>Thu, 04 Feb 2021 11:10:00 +0806</pubDate></item></channel></rss>
